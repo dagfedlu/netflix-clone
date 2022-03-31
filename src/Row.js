@@ -18,10 +18,18 @@ function Row({ title, fetchUrl }) {
     fetchData();
 
   }, [fetchUrl]);
+
+  console.table(movies);
   
   return (
-    <div>
+    <div className='row'>
         <h2>{title}</h2>
+        <div className='row__posters'>
+        { /*several row posts*/ }
+        {movies.map(movie => (
+            <img src={movie.poster_path} alt={movie.name}/>
+        ))}
+        </div>
     </div>
   )
 }
