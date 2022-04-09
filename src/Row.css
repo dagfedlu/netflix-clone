@@ -5,6 +5,14 @@
 /* display images in row */
 .row__posters {
     display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+/* removing the scroll bar */
+.row__posters::-webkit-scrollbar {
+    display: none;
 }
 
 /* adjusting image size */
@@ -13,7 +21,7 @@
     object-fit: contain;
     max-height: 100px;
     margin-right: 10px;
-    transition: transform 455ms;
+    transition: transform 450ms;
 }
 
 /* enlarge image when hovering over a poster  */
