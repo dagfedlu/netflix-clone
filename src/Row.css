@@ -13,7 +13,10 @@
     object-fit: contain;
     max-height: 100px;
     margin-right: 10px;
-    transition: transform 450ms;
+    transition: transform 455ms;
 }
 
 /* enlarge image when hovering over a poster  */
+.row__poster:hover {
+    transform: scale(1.09);
+}
