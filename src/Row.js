@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from './axios'
+import './Row.css'
 
+//base url to append to the poster_path
+const base_url = "https://image.tmdb.org/t/p/original/"; 
 
 function Row({ title, fetchUrl }) {
 
@@ -27,7 +30,10 @@ function Row({ title, fetchUrl }) {
         <div className='row__posters'>
         { /*several row posts*/ }
         {movies.map(movie => (
-            <img src={movie.poster_path} alt={movie.name}/>
+            <img
+                className='row__poster' 
+                src={`${base_url}${movie.poster_path}`} 
+                alt={movie.name}/>
         ))}
         </div>
     </div>
