@@ -1,5 +1,5 @@
 .row {
-
+    margin-left: 20px;
 }
 
 /* display images in row */
@@ -24,7 +24,15 @@
     transition: transform 450ms;
 }
 
+/* if it's a large row */
+.row__posterLarge {
+    max-height: 250px;
+}
+.row__posterLarge:hover {
+    transform: scale(1.09);
+}
+
 /* enlarge image when hovering over a poster  */
 .row__poster:hover {
-    transform: scale(1.09);
+    transform: scale(1.08);
 }
